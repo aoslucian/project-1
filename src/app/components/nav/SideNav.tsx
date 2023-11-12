@@ -20,16 +20,21 @@ export default function SideNav({}: Props) {
   return (
     <div className="flex flex-col justify-center max-w-7xl relative">
       <div
-        className={`flex justify-end items-center h-[400px] border border-blue-500 ${
-          isMenuOpen ? "bg-gray-400" : "bg-transparent"
+        className={`flex justify-end items-center h-[450px] border border-blue-500 ${
+          isMenuOpen ? "bg-gray-800" : "bg-transparent"
         }`}
       >
-        <Image src="/Nissan.jpg" alt="Nissan" width={590} height={100} className="object-cover mx-auto"/>
-
+        <Image
+          src="/Nissan.jpg"
+          alt="Nissan"
+          width={590}
+          height={400}
+          className="object-cover mx-auto"
+        />
       </div>
       <button
         className="text-white text-2xl right-0 absolute
-           -mr-12 z-20 font-semibold transform -rotate-90 border border-red-500 py-2 px-10  rounded-t-2xl bg-red-500 "
+           -mr-12 z-20 font-semibold transform -rotate-90 border border-red-500 py-2 px-10  rounded-t-2xl bg-red-500"
         onClick={toggleMenu}
       >
         Menu
@@ -37,7 +42,7 @@ export default function SideNav({}: Props) {
       <div
         className={`flex ${
           isMenuOpen
-            ? "absolute bg-gray-400 bg-opacity-30 transition-transform border border-green-500 w-full duration-2000 transform translate-x-0"
+            ? "absolute w-full bg-gray-800 bg-opacity-80 transition-transform border border-green-500 duration-500 transform translate-y-0 md:transform translate-x-0"
             : "hidden"
         }`}
       >
