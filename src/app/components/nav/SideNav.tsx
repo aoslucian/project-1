@@ -6,7 +6,7 @@ import { navLinks } from "./nav-links";
 import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 
-import {IoClose} from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
 type Props = {};
 export default function SideNav({}: Props) {
@@ -23,7 +23,7 @@ export default function SideNav({}: Props) {
   return (
     <div className="flex flex-col justify-center max-w-7xl relative">
       <div
-        className={`flex justify-end items-center h-full border border-blue-500 ${
+        className={`flex justify-end items-center mx-auto h-full ${
           isMenuOpen ? "bg-gray-800" : "bg-transparent"
         }`}
       >
@@ -37,11 +37,10 @@ export default function SideNav({}: Props) {
       </div>
 
       <button
-
-        className={`${
+        className={`text-2xl right-0 absolute text-white  z-20 font-semibold transform -rotate-90 border border-red-500 bg-red-500 rounded-t-2xl ${
           isMenuOpen
-            ? "text-white text-5xl right-0 absolute -mr-[52px] z-20 font-semibold transform -rotate-90 border border-red-500 py-1 px-[56px] rounded-t-2xl bg-red-500"
-            : " text-white text-2xl right-0 absolute -mr-[53px] z-20 font-semibold transform -rotate-90 border border-red-500 py-3 px-12 rounded-t-2xl bg-red-500"
+            ? "text-5xl -mr-10 xl:-mr-[52px]  pb-1 py-1 px-10 md:px-14"
+            : "-mr-10 xl:-mr-[53px] py-3 px-8 md:px-12"
         }`}
         onClick={toggleMenu}
       >
@@ -51,18 +50,18 @@ export default function SideNav({}: Props) {
       <div
         className={`flex ${
           isMenuOpen
-            ? "absolute w-full h-full my-auto bg-gray-800 bg-opacity-80 transition-transform  duration-1000 transform -translate-y-0 md:transform md:-translate-x-0 md:duration-900 border border-green-500"
+            ? "absolute w-full h-full my-auto bg-gray-800 bg-opacity-80 transition-transform  duration-1000 transform -translate-y-0 md:transform md:-translate-x-0 md:duration-900"
             : "hidden"
         }`}
       >
-        <aside className="flex m-auto border border-red-500 overflow-hidden">
+        <aside className="flex m-auto overflow-hidden">
           <nav className="flex">
             <ul className="flex flex-col overflow-hidden">
               {navLinks.map(({ link, title }) => (
                 <li className="m-2" key={title}>
                   <Link href={link} onClick={closeMenu}>
                     <div
-                      className={`flex py-1 md:py-3 px-6 md:px-12 my-auto bg-orange-500 rounded hover:bg-red-500 cursor-pointer`}
+                      className={`flex py-2 md:py-3 px-8 md:px-12 my-auto bg-orange-500 font-medium md:font-semibold rounded hover:bg-red-500 cursor-pointer`}
                     >
                       {title}
                     </div>
