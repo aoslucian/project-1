@@ -42,15 +42,15 @@ export default function SideNav({}: Props) {
       <div
         className={`flex ${
           isMenuOpen
-            ? "absolute w-full bg-gray-800 bg-opacity-80 transition-transform border border-green-500 duration-500 transform translate-y-0 md:transform translate-x-0"
+            ? "absolute w-full bg-gray-800 bg-opacity-80 transition-transform border border-green-500 duration-900 transform translate-y-0 md:transform translate-x-0 ease-in-out"
             : "hidden"
         }`}
       >
-        <aside className="flex mx-auto border border-red-500 overflow-hidden ">
+        <aside className="flex mx-auto border border-red-500 overflow-hidden">
           <nav className="flex flex-col">
-            <ul className="flex flex-col  ">
+            <ul className="flex flex-col my-7 ">
               {navLinks.map(({ link, title }) => (
-                <li className="m-2 " key={title}>
+                <li className="m-2" key={title}>
                   <Link href={link} onClick={closeMenu}>
                     <div
                       className={`flex py-2 px-12 bg-orange-500 rounded hover:bg-red-500 cursor-pointer`}
@@ -63,6 +63,7 @@ export default function SideNav({}: Props) {
             </ul>
           </nav>
         </aside>
+        
       </div>
     </div>
   );
