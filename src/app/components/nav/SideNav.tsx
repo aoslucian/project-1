@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { navLinks } from "./nav-links";
 import Image from "next/image";
-import { AiOutlineClose } from "react-icons/ai";
-
 import { IoClose } from "react-icons/io5";
 
 type Props = {};
@@ -39,8 +37,8 @@ export default function SideNav({}: Props) {
       <button
         className={`text-2xl right-0 absolute text-white  z-20 font-semibold transform -rotate-90 border border-red-500 bg-red-500 rounded-t-2xl ${
           isMenuOpen
-            ? "text-5xl -mr-10 xl:-mr-[52px]  pb-1 py-1 px-10 md:px-14"
-            : "-mr-10 xl:-mr-[53px] py-3 px-8 md:px-12"
+            ? "text-5xl -mr-[38px] md:-mr-11 xl:-mr-[52px]  pb-1 py-1 px-10 md:px-14"
+            : "-mr-10 md:-mr-11 xl:-mr-[53px] py-3 px-8 md:px-12"
         }`}
         onClick={toggleMenu}
       >
