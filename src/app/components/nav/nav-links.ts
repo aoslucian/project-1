@@ -15,17 +15,17 @@ export const navLinks=[
         title:'Login'  ,  
         link:'/login',
     },
-    {
-        title:'Register'  ,  
-        link:'/register',
-    },
-    {
-        title:'Profile'  ,  
-        link:'/profile',
-    },
-    {
-        title:'Logout'  ,  
-        link:'/logout',
-    },
+    // {
+    //     title:'Register'  ,  
+    //     link:'/register',
+    // },
+    // {
+    //     title:'Profile'  ,  
+    //     link:'/profile',
+    // },
+    // {
+    //     title:'Logout'  ,  
+    //     link:'/logout',
+    // },
  
 ]
